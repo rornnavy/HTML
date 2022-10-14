@@ -1,0 +1,348 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(252, 188, 188, 0.3411764706);
+}
+nav .logo {
+  width: 20%;
+}
+nav .logo img {
+  width: 90px;
+  height: 85px;
+}
+nav .menu {
+  width: 80%;
+  display: flex;
+}
+nav .menu .logo {
+  width: 10%;
+}
+nav .menu-left {
+  width: 90%;
+  padding: 10px;
+}
+nav #click {
+  display: none;
+}
+nav .fa-bars {
+  color: #170263;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+nav .pages {
+  margin-top: 15px;
+}
+nav .pages ul {
+  display: flex;
+  list-style: none;
+}
+nav .pages ul li {
+  margin: 1px;
+}
+nav .pages ul li .active {
+  background: #0096DE;
+}
+nav .pages ul li a {
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .pages ul li a:hover {
+  background: #0096DE;
+}
+nav .pages ul li:hover::after {
+  width: 100%;
+}
+nav .pages ul li:hover,
+nav .pages ul .contain-fluid .row .text-center:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+nav .btn-right {
+  width: 25%;
+}
+nav .btn-right button {
+  font-weight: bold;
+  color: #fff;
+  width: 25%;
+  float: right;
+  margin: 20px 3px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+}
+nav .btn-right button:hover,
+nav .btn-right .contain-fluid .row .text-center h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+  box-shadow: inset 100px 0 0 0 grey;
+  color: white;
+}
+nav .btn-right button:first-child {
+  background: #0096DE;
+}
+
+@media (max-width: 850px) {
+  nav .btn-right button {
+    padding: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    overflow-x: hidden;
+    padding: 1rem 1.4rem;
+  }
+  nav .logo img {
+    width: 4rem;
+    height: 4rem;
+  }
+  nav .btn-right {
+    display: none;
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 64px;
+    width: 100%;
+    display: block;
+    height: auto;
+    background: rgba(1, 1, 85, 0.8901960784);
+    text-align: left;
+    transition: all 1s ease;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 0.8rem 2rem;
+  }
+  nav ul li a {
+    display: block;
+    padding: 8px 0px;
+    color: white;
+  }
+  nav ul li:hover {
+    transform: none;
+  }
+  nav ul li:hover::after {
+    width: 0;
+  }
+  nav .menu-bars .fa-bars {
+    display: block;
+    float: right;
+  }
+  nav #click:checked ~ ul {
+    left: 0%;
+  }
+  nav #click:checked ~ .menu-bars i::before {
+    content: "\f00d";
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100vh;
+}
+.contact-container .img-contact {
+  width: 100%;
+}
+.contact-container .img-contact img {
+  width: 100%;
+}
+.contact-container .map {
+  width: 100%;
+}
+.contact-container .map iframe {
+  width: 100%;
+  margin-bottom: 10%;
+  height: 100vh;
+  border-radius: 10px;
+}
+.contact-container .message {
+  width: 80%;
+  margin: 10% auto;
+  display: flex;
+  gap: 5%;
+  padding: 5%;
+  border-radius: 10px;
+  background: #e6e3e3;
+}
+.contact-container .message-via {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-container .message-via span {
+  border-bottom: 5px solid green;
+}
+.contact-container .message-via input {
+  padding: 20px;
+  border: none;
+  border-radius: 7px;
+  margin: 10px 0;
+  outline: none;
+}
+.contact-container .message-via input:focus {
+  border: 2px solid green;
+}
+.contact-container .message-via textarea {
+  resize: vertical;
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+}
+.contact-container .message-via textarea:focus {
+  border: 2px solid green;
+}
+.contact-container .message-send {
+  width: 100%;
+}
+.contact-container .message-send button {
+  width: 100%;
+  margin-top: 10px;
+  background: green;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  border-radius: 7px;
+  float: right;
+}
+.contact-container .message .contact-via {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 40px;
+  gap: 50px;
+}
+.contact-container .message .contact-via .contact-Us {
+  display: flex;
+  gap: 50px;
+}
+.contact-container .message .contact-via .contact-Us .via {
+  width: 50px;
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contact-container .message .contact-via .contact-Us .via i {
+  font-size: 30px;
+  color: green;
+}
+
+footer {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 30px;
+  background: rgba(99, 97, 97, 0.3411764706);
+}
+footer .follow-via {
+  font-size: 14px;
+}
+footer .follow-via span {
+  color: #000;
+}
+footer .follow-via i {
+  font-size: 30px;
+  margin: 10px;
+}
+footer span {
+  line-height: 20px;
+}
+footer p {
+  text-align: justify;
+  margin-top: 10px;
+  line-height: 20px;
+  font-size: 15px;
+}
+footer p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .about h4 {
+  margin-bottom: 10px;
+}
+footer .address a {
+  color: #0096DE;
+}
+
+@media (max-width: 850px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  footer .about {
+    width: 70%;
+  }
+  footer .about span {
+    text-align: justify;
+  }
+  footer .address {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .contact-container .message {
+    width: 80%;
+  }
+  .contact-container .message-via {
+    width: 70%;
+  }
+  .contact-container .message .contact-via {
+    width: 30%;
+  }
+  .contact-container .message .contact-via .contact-Us .via {
+    background: none;
+    box-shadow: none;
+  }
+  .contact-container .message .contact-via .contact-Us .via i {
+    font-size: 50px;
+    color: green;
+  }
+  .contact-container .map iframe {
+    height: 50vh;
+  }
+}/*# sourceMappingURL=contact.css.map */

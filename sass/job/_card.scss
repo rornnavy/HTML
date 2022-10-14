@@ -1,0 +1,95 @@
+.card-container {
+  background: $container-bg;
+  padding: $padding;
+  .card-content {
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,150px);
+    grid-gap: 20px;
+    .card {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-shadow: 0 0 5px .5px $registerbg;
+      transition:ease-in-out 0.3s;
+      @include button;
+      &-top {
+        display: flex;
+        justify-content: space-around;
+        &-icon {
+          i {
+            font-size: 40px;
+          }
+        }
+        h5 {
+          color: red;
+        }
+      }
+      &-bottom {
+        padding-left: 10px;
+        line-height: 40px;
+        button {
+          // float: right;
+          width: 90%;
+          padding: 5px;
+          border-radius: 8px;
+          background: none;
+          border:1.5px solid $registerbg;
+          cursor: pointer;
+          transition: ease-in-out 0.3s;
+        }
+        button:hover {
+          background: $registerbg;
+          color: #fff;
+        }
+      }
+    }
+    .card:hover{
+      transform: scale(1.06);
+    }
+  }
+  .see-all {
+    display: flex;
+    justify-content:center;
+    button {
+      padding: 10px;
+      border-radius: 10px;
+      width: 20%;
+      border: 1.5px solid $registerbg;
+      font-size: 14px;
+      transition: ease-in-out 0.3s;
+
+    }
+    button:hover {
+      background: $registerbg;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .card-container {
+    overflow: hidden;
+    .card-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+  }
+  
+}
+@media (max-width: 600px) {
+  .card-container {
+    overflow-x: hidden;
+    .card-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+  
+}

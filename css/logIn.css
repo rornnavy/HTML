@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(222, 221, 230);
+  padding: 90px 0px;
+}
+
+.container {
+  background-color: rgb(145, 138, 138);
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(32, 32, 32, 0.15);
+  width: 30%;
+  height: 80vh;
+}
+.container .form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.form-box, label {
+  padding: 10px;
+}
+
+span {
+  margin: auto;
+}
+
+.title, span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: rgb(0, 0, 255);
+}
+
+input[type=password],
+input[type=Email],
+input[type=checkbox],
+input[type=button],
+input[type=submit] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type=button] {
+  background-color: rgb(43, 94, 224);
+  font-size: 15px;
+}
+
+input[type=submit] {
+  background-color: rgb(194, 101, 15);
+  font-size: 15px;
+}
+
+.icon i {
+  float: right;
+  font-size: 35px;
+  color: blue;
+  gap: 50px;
+  padding: 15px;
+  margin-top: -15%;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 60%;
+    height: 50vh;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 80%;
+    height: 80vh;
+  }
+}/*# sourceMappingURL=logIn.css.map */

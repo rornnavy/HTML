@@ -1,0 +1,13 @@
+@import '../global/variable';
+@mixin button {
+  padding: $padding;
+  border: none;
+  border-radius:7px;
+  @content;
+}
+@mixin message {
+  padding: 20px;
+  border: none;
+  border-radius:7px;
+  @content;
+}

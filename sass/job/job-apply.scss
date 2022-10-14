@@ -1,0 +1,230 @@
+@import '../global/navbar';
+.apply_job{
+  padding: $padding;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: auto;
+  background: #d4f4d4;
+  &_detail{
+     header{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: $padding;
+        border-radius: $border-radius;
+        div{
+           background: #fff;
+           width: 80px;
+           padding: $padding;
+           border-radius: 40px;
+           border: 1.5px solid $registerbg;
+          }
+          div:hover {
+            background: $registerbg;
+            transition: ease-in-out 0.2s;
+          }
+        .three {
+          text-align: center;
+         }
+     }
+     .list{
+        h2{
+           margin: 5% 0 2% 0;
+           span {
+            padding: 5px;
+            border-bottom: 4px solid $registerbg;
+           }
+        }
+        &_card{
+           display: flex;
+           background:#fff;
+           box-shadow: 0 0 5px .5px $registerbg;
+           border-radius: 10px;
+           margin: 20px 0;
+           .logo{
+              width: 5%;
+              margin: 20px 10px;
+              img{
+                 width: 100%;
+              }
+           }
+           .text{
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+              width: 100%;
+              padding: $padding;
+              .more{
+                 h4,h5{
+                    padding: 6px;
+                 }
+                 .urgent{
+                    background: $registerbg;
+                    padding: 6px;
+                    border-radius: 40px;
+                    color: #fff;
+                    cursor: pointer;
+                 }
+                 .salary{
+                    color: orange;
+                    margin: 4px;
+                    }
+                    .closed{
+                       color: red;
+                       font-weight: bolder;
+                    }
+                 button{
+                    float: right;
+                    background: transparent;
+                    width: 90px;
+                    padding: 8px;
+                    border: 2.5px solid $registerbg;
+                    border-radius: 6px;
+                    color: $registerbg;
+                    font-weight: bolder;
+                    transition: ease-in-out .3s;
+                 }
+                 button:hover{
+                    background: $registerbg;
+                    color: #fff;
+                    cursor: pointer;
+                 }
+              }
+           }
+
+        }
+     }
+     
+  }
+  .companies{
+    background: #fff;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: $border-radius;
+    h1{
+       margin: 0 0 8% 0;
+       span {
+         padding: 5px;
+        border-bottom: 4px solid $registerbg;
+       }
+    }
+    &_logo{
+       width: 120px;
+       img{
+          width: 100%;
+       }
+    }
+    &_card{
+       background: #d4f4d4;
+       border-radius: $border-radius;
+       padding: 20px;
+       margin-bottom: $margin;
+       .companies_profile{
+          
+          .more{
+             display: flex;
+             h3 {
+                width: 120px;
+             }
+            
+          }
+       }
+    }
+ }
+}
+@import '../global/footer';
+@media (max-width: 850px) {
+   .apply_job {
+      overflow-x: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      header {
+         width: 95%;
+         padding: $padding;
+      }
+      .list {
+         padding: $padding;
+         box-sizing: border-box;
+         margin: auto;
+         &_card {
+            width: 97%;
+            .more {
+               h5 {
+                  line-height: 30px;
+               }
+            }
+         }
+      }
+      .companies {
+         width: 95%;
+         margin-left: $margin;
+         box-sizing: border-box;
+      }
+      
+   }
+}
+@media (max-width: 600px) {
+   .apply_job{
+      overflow-x: hidden;
+      background: #d7c0c0;
+      header {
+         width: 50%;
+      }
+      .list{
+         &_card{
+            display: block;
+            width: 60%;
+            .logo{
+               width: 25%;
+               margin:0 auto;
+               img{
+                  margin-top: 20px;
+
+               }
+            }
+            .text{
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               .more{
+                  button{
+                     float: none;                  
+                  }
+               }
+            }
+         }
+      }
+      .companies {
+         width: 60%;
+         &_card{
+            display: block;
+            .companies_logo{
+               margin: 0 auto;
+               img{
+                  width: 100%;
+               }
+            }
+            .companies_profile{
+               .more{
+                  display: flex;
+                  h3,h4{
+                     padding: 10px;
+                  }
+                  .hide{
+                     display: none;
+                  }
+               }
+               .more:nth-child(2){
+                  display: none;
+               }
+               .more:nth-child(4){
+                  display: none;
+               }
+               .more:nth-child(3){
+                  display: none;
+               }
+
+            }
+         }
+      }
+
+   }
+}
